@@ -14,7 +14,7 @@ const SocketStatus = {
 	CONNECTED: 2,
 };
 
-export class SocketClient {
+export default class SocketClient {
 	constructor(backupServer) {
 		this.onConnectListener = [];
 		this.onUpdateListener = [];
