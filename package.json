@@ -1,0 +1,30 @@
+{
+  "name": "dok-socket",
+  "version": "1.0.0",
+  "description": "Uses socket.io to handle data sharing easily via sockets.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacklehamster/dok-socket.git"
+  },
+  "keywords": [
+    "dok"
+  ],
+  "author": "Vincent Le Quang <vincentlequang@gmail.com> (https://jacklehamster.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacklehamster/dok-socket/issues"
+  },
+  "homepage": "https://github.com/jacklehamster/dok-socket#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dok-pool": "^1.0.46",
+    "dok-utils": "^1.0.2",
+    "mocha": "^7.2.0",
+    "sinon": "^9.0.2",
+    "socket.io": "^2.3.0"
+  }
+}
