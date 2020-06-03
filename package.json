@@ -1,6 +1,6 @@
 {
   "name": "dok-socket",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Uses socket.io to handle data sharing easily via sockets.",
   "main": "src/index.js",
   "scripts": {
