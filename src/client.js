@@ -1,5 +1,5 @@
-const Pool = require("dok-pool");
-const Utils = require("dok-utils");
+const { Pool } = require("dok-pool");
+const { Utils } = require("dok-utils");
 
 /**
 	Dok-gamelib engine
