@@ -21,7 +21,7 @@
   "homepage": "https://github.com/jacklehamster/dok-socket#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.2.0",
+    "mocha": "^10.2.0",
     "sinon": "^9.0.2",
     "socket.io": "^2.3.0"
   }
