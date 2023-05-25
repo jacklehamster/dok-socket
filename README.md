@@ -138,4 +138,4 @@ This is an easy way to use socket.io. If you have your own use case, I would sug
 
 The doc is not super accurate. The best to do is check the source code of the demo:
 
-Try the [demo here](/dok-socket/)
+Try the [demo here](https://jacklehamster.github.io/dok-socket/)
