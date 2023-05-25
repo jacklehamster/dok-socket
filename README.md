@@ -132,3 +132,10 @@ console.log("Hello everybody!");	//	This logs the messsage "Hello everybody!" on
 ```
 
 This is an easy way to use socket.io. If you have your own use case, I would suggest you code your own implementation using socket.io. The package is available here: https://socket.io/
+
+
+# Demo
+
+The doc is not super accurate. The best to do is check the source code of the demo:
+
+Try the [demo here](/dok-socket/)
