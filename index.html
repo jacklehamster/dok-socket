@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="json-compact.js"></script>
+
+        <style>
+            body {
+                cursor: none;
+            }
+        </style>
+
+        <script>
+
+            function init() {
+                const backupServer = null;
+            
+                const { 
+                    SocketClient,
+                    randomEmoji,
+                } = dokLib;
+
+                const emoji = randomEmoji.random({count: 1})[0];
+                
+                const socket = new SocketClient(backupServer);
+                socket.join("paris");
+
+                document.addEventListener("mousemove", e => {
+                    socket.update({ x: e.pageX, y: e.pageY, emoji });
+                    showEmoji(emoji, e.pageX, e.pageY);
+                });
+
+                socket.addEventListener("update", (id, data) => {
+                    if (data) {
+                        const {emoji, x, y} = data;
+                        if (emoji) {
+                            showEmoji(emoji, x, y);
+                        }
+                    }
+                });
+
+
+                function showEmoji(emoji, x, y) {
+                    let div = document.getElementById(emoji.charCodeAt(0));
+                    if (!div) {
+                        div = document.body.appendChild(document.createElement("div"));
+                        div.id = emoji.charCodeAt(0);
+                        div.style.position = "absolute";
+                        div.style.pointerEvents = "none";
+                        div.textContent = emoji;
+                    }
+                    div.style.left = `${x}px`;
+                    div.style.top = `${y}px`;
+                }
+
+                function sendChat(message) {
+                    const div = document.getElementById("chat").appendChild(document.createElement("div"));
+                    div.textContent = message;
+                }
+
+                sendChat = socket.wrap("chat", sendChat);
+
+
+                function onSend() {
+                    const textarea = document.getElementById('textarea');
+                    sendChat(`${emoji}: ${textarea.value}`);
+                    textarea.value = '';
+                }
+
+                document.getElementById("sendButton").addEventListener("click", onSend);
+            }
+
+            
+
+            document.addEventListener("DOMContentLoaded", init);
+            
+            
+        </script>
+    </head>
+    <body>
+        <textarea id="textarea"></textarea>
+        <button id="sendButton">send</button>
+        <div id="chat"></div>
+    </body>
+</html>
+
+

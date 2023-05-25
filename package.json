@@ -4,6 +4,7 @@
   "description": "Uses socket.io to handle data sharing easily via sockets.",
   "main": "src/index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +22,11 @@
   "homepage": "https://github.com/jacklehamster/dok-socket#readme",
   "dependencies": {
     "chai": "^4.2.0",
+    "colors": "^1.4.0",
+    "dok-socket-client": "^1.0.4",
+    "express": "^4.18.2",
     "mocha": "^10.2.0",
+    "random-unicode-emoji": "^1.0.5",
     "sinon": "^9.0.2",
     "socket.io": "^2.3.0"
   }
