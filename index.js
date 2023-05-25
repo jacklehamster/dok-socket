@@ -2,7 +2,7 @@ const express = require("express");
 const { serveSocket } = require("./src/index")
 require('colors');
 
-const port = process.env.PORT | 3000;
+const port = process.env.PORT ?? 3000;
 
 const app = express();
 const { server } = serveSocket(app);
