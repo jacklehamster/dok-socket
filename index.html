@@ -67,6 +67,7 @@
                 }
 
                 document.getElementById("sendButton").addEventListener("click", onSend);
+                document.getElementBydId("backupServer").textContent = backupServer;
             }
 
             
@@ -84,6 +85,7 @@
         <textarea id="textarea"></textarea>
         <button id="sendButton">send</button>
         <div id="chat" style="height: 100%"></div>
+        <div>Socket hosted on backup server: <span id="backupServer"></span></div>
         
 <div style="position: absolute; right: 15px; top: 15px">
       <a id="source" href="https://neatnik.net/view-source/[nowrap,notidy]/" target="_blank">view source</a>
